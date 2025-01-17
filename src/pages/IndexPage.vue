@@ -7,12 +7,16 @@
       :meta="meta"
     ></example-component>
   </q-page>
+  <MyComponent />
+  <MyTsxComponent/>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { Todo, Meta } from 'components/models'
 import ExampleComponent from 'components/ExampleComponent.vue'
+import MyComponent from 'components/MyComponent.tsx'
+import MyTsxComponent from 'components/MyTsxComponent.vue'
 
 const todos = ref<Todo[]>([
   {

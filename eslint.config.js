@@ -55,7 +55,12 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-
+      parser: '@typescript-eslint/parser', // 指定解析器为 @typescript-eslint/parser
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true // 启用 JSX 解析
+        }
+      },
       globals: {
         ...globals.browser,
         ...globals.node, // SSR, Electron, config files
@@ -85,6 +90,11 @@ export default [
         ...globals.serviceworker,
       },
     },
+  },
+
+  {
+    files: ['**/*.vue'],
+    processor: 'vue-eslint-parser' // 处理 Vue 文件
   },
 
   prettierSkipFormatting,

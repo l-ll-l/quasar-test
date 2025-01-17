@@ -1,3 +1,8 @@
 {
-  "extends": "./.quasar/tsconfig.json"
+  "extends": "./.quasar/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve", // 或者 "react"，根据你的需求选择
+    "jsxImportSource": "vue",
+    "allowImportingTsExtensions": true // 确保这里也开启
+  }
 }

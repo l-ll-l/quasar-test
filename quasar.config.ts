@@ -3,6 +3,7 @@
 
 import { defineConfig } from '#q-app/wrappers'
 import { fileURLToPath } from 'node:url'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig((ctx) => {
   return {
@@ -64,6 +65,7 @@ export default defineConfig((ctx) => {
       // viteVuePluginOptions: {},
 
       vitePlugins: [
+        vueJsx(),
         [
           '@intlify/unplugin-vue-i18n/vite',
           {
